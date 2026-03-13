@@ -19,17 +19,26 @@ while op!=2:
             print("     1.Perimetro")
             print("     2.Area")
             calcular = int(input("Seleccione una opción:\n"))
+            lados = float(input("Digite la medida de los lados:\n"))
             if calcular == 1:
-                perimetro = float(input("Digite la medida de los lados:\n"))
-                total_perimetro = perimetro * 3
+                total_perimetro = lados * 3
                 print(f"El perimetro de su triangulo equilatero es: {total_perimetro}")
             elif calcular == 2:
-                a
-
+                area = ((3**(1/2))/4)*(lados**2)
+                print(f"El área de su triangulo equilatero es:{area}")
         elif figura_2d == 2:
             print("¿Que desea calcular?")
             print("     1.Perimetro")
             print("     2.Area")
+            calcular = int(input("Seleccione una opción:\n"))
+            lado_a = float(input("Digite la medida del lado a:\n"))
+            lado_b = float(input("Digite la medida del lado b:\n"))
+            if calcular == 1:
+                total_perimetro = 2*(lado_a+lado_b)
+                print(f"El perimetro de su rectángulo es:{total_perimetro}")
+            elif calcular == 2:
+                area = lado_a * lado_b
+                print(f"El area de su rectángulo es:{area}")
         elif figura_2d == 3:
             print("¿Que desea calcular?")
             print("     1.Perimetro")
