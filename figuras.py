@@ -47,11 +47,13 @@ while op!=2:
             print("¿Que desea calcular?")
             print("     1.Perimetro")
             print("     2.Area")
-        elif figura_2d == 5:
-            d
+        #elif figura_2d == 5:
+            
     elif op == 2:
         print("--- Figuras 3D ---")
         print("     1.Cubo")
         print("     2.Esfera")
         print("     3.Cilindro")
         print("     4.Pirámide")
+    elif op == 3:
+        print("Saliendo")
