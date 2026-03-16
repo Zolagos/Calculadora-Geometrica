@@ -4,7 +4,6 @@ from calcular_2d import calculos_triangulo_equilatero,calculos_rectangulo,calcul
 from calcular_2d import calculos_hexagono, calculos_triangulo_rectangulo
 from calcular_3d import calculos_cubo, calculos_esfera, calculos_cilindro, calculos_piramide
 
-pi = 3.1416
 tipo_figura = 0
 while tipo_figura != 3:
     tipo_figura = menu_principal()
@@ -19,7 +18,6 @@ while tipo_figura != 3:
             elif escoger == 2:
                 menu_principal()
             elif escoger == 3:
-                print("Gracias por utilizar la calculadora")
                 tipo_figura = 3
         elif figura_2d == 2:
             calcular = menu_perimetro_area()
@@ -30,7 +28,6 @@ while tipo_figura != 3:
             elif escoger == 2:
                 menu_principal()
             elif escoger == 3:
-                print("Gracias por utilizar la calculadora")
                 tipo_figura = 3
         elif figura_2d == 3:
             calcular = menu_perimetro_area()
@@ -41,7 +38,6 @@ while tipo_figura != 3:
             elif escoger == 2:
                 menu_principal()
             elif escoger == 3:
-                print("Gracias por utilizar la calculadora")
                 tipo_figura = 3
         elif figura_2d == 4: 
             calcular = menu_perimetro_area()
@@ -52,7 +48,6 @@ while tipo_figura != 3:
             elif escoger == 2:
                 menu_principal()
             elif escoger == 3:
-                print("Gracias por utilizar la calculadora")
                 tipo_figura = 3
         elif figura_2d == 5:
             triangulo = menu_triangulo_rectangulo()
@@ -63,7 +58,6 @@ while tipo_figura != 3:
             elif escoger == 2:
                 menu_principal()
             elif escoger == 3:
-                print("Gracias por utilizar la calculadora")
                 tipo_figura = 3
 
     if tipo_figura == 2:
@@ -77,7 +71,6 @@ while tipo_figura != 3:
             elif escoger == 2:
                 menu_principal()
             elif escoger == 3:
-                print("Gracias por utilizar la calculadora")
                 tipo_figura = 3
         if figura_3d == 2:
             calcular = menu_area_volumen()
@@ -88,7 +81,6 @@ while tipo_figura != 3:
             elif escoger == 2:
                 menu_principal()
             elif escoger == 3:
-                print("Gracias por utilizar la calculadora")
                 tipo_figura = 3
         if figura_3d == 3:
             calcular = menu_area_volumen()
@@ -99,7 +91,6 @@ while tipo_figura != 3:
             elif escoger == 2:
                 menu_principal()
             elif escoger == 3:
-                print("Gracias por utilizar la calculadora")
                 tipo_figura = 3
         if figura_3d == 4:
             calcular = menu_area_volumen()
@@ -110,7 +101,6 @@ while tipo_figura != 3:
             elif escoger == 2:
                 menu_principal()
             elif escoger == 3:
-                print("Gracias por utilizar la calculadora")
                 tipo_figura = 3
 
     if tipo_figura == 3:

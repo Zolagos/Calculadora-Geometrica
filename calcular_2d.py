@@ -1,4 +1,5 @@
 def calculos_triangulo_equilatero(calcular):
+
     try:
         lados = float(input("Digite la medida de los lados:\n"))
         if calcular == 1:
@@ -50,15 +51,24 @@ def calculos_hexagono (calcular):
 
 def calculos_triangulo_rectangulo(triangulo):
     try:
-        base = float(input("Digite la medida de su base:\n"))
-        altura = float(input("Digite la medida de su altura:\n"))
-        hipotenusa = ((altura**2)+(base**2))**(1/2)
         if triangulo == 1:
+            base = float(input("Digite la medida de su base:\n"))
+            altura = float(input("Digite la medida de su altura:\n"))
+            hipotenusa = ((altura**2)+(base**2))**(1/2)
             total_perimetro = altura + base + hipotenusa
             print(f"El perimetro de su triangulo rectangulo es:{total_perimetro:.2f}\n")
         elif triangulo == 2:
+            base = float(input("Digite la medida de su base:\n"))
+            altura = float(input("Digite la medida de su altura:\n"))
             area = (base*altura)/2
             print(f"El area de su triangulo rectangulo es:{area:.2f}\n")
+        elif triangulo == 3:
+            angulo = float(input("Digite un angulo:\n"))
+            angulos = 90 - angulo 
+            if angulo > 90:
+                print("El angulo no puede ser mayor a 90°")
+            else:
+                print((f"Sus angulos son: 90°, {angulos:.2f°}, {angulo:.2f}°\n"))     
     except ValueError:
         print("El tipo de dato ingresado no es valido\n")
 
