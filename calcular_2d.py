@@ -65,8 +65,8 @@ def calculos_triangulo_rectangulo(triangulo):
         elif triangulo == 3:
             angulo = float(input("Digite un angulo:\n"))
             angulos = 90 - angulo 
-            if angulo > 90:
-                print("El angulo no puede ser mayor a 90°")
+            if angulo >= 90 or angulo <= 0:
+                print("El angulo ingresado debe ser mayor a 0 y menor a 90°")
             else:
                 print((f"Sus angulos son: 90°, {angulos:.2f°}, {angulo:.2f}°\n"))     
     except ValueError:
