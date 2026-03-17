@@ -73,25 +73,6 @@ def menu_perimetro_area ():
             print("El tipo de dato ingresado no es un entero\n")
     return calcular
 
-
-def menu_triangulo_rectangulo ():
-    cond = False
-    while not cond:
-        print("¿Que desea calcular?")
-        print("     1.Perimetro")
-        print("     2.Area")
-        print("     3.Angulos")
-        try:
-            triangulo = int(input("Seleccione una opción:\n"))
-            if triangulo !=1 and triangulo !=2 and triangulo !=3:
-                print("El numero ingresado no es valido\n")
-                cond = False
-            else:
-                cond = True
-        except ValueError:
-            print("El tipo de dato ingresado no es un entero\n")
-    return triangulo
-
 def menu_escoger():
     con = False
     while not con:
@@ -120,9 +101,45 @@ def menu_area_volumen():
             calcular = int(input("Seleccione una opción:\n"))
             if calcular !=1 and calcular !=2:
                 print("El numero ingresado no es valido\n")
+                cond = False
+            else:
+                cond = True
+        except ValueError:
+            print("El tipo de dato ingresado no es un entero\n")
+    return calcular
+
+def datos_triangulo():
+    con =False
+    while not con:
+        print("¿Que datos del triangulo rectangulo conoce?")
+        print("      1.C. Opuesto y C. Adyacente")
+        print("      2.C. Adyacente e hipotenusa")
+        print("      3.C. Opuesto e hipotenusa")
+        print("      4.Angulo")
+        try:
+            opcion = int(input("Seleccione una opcion:\n"))
+            if opcion !=1 and opcion !=2 and opcion !=3 and opcion !=4:
+                print("El numero ingresado no es valido\n")
                 con = False
             else:
                 con = True
         except ValueError:
             print("El tipo de dato ingresado no es un entero\n")
-    return calcular
+    return opcion
+
+def menu_triangulo_rectangulo ():
+    cond = False
+    while not cond:
+        print("¿Que desea calcular?")
+        print("     1.Perimetro")
+        print("     2.Area")
+        try:
+            triangulo = int(input("Seleccione una opción:\n"))
+            if triangulo !=1 and triangulo !=2:
+                print("El numero ingresado no es valido\n")
+                cond = False
+            else:
+                cond = True
+        except ValueError:
+            print("El tipo de dato ingresado no es un entero\n")
+    return triangulo
