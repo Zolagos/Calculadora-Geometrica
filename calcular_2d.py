@@ -1,5 +1,4 @@
 def calculos_triangulo_equilatero(calcular):
-
     try:
         lados = float(input("Digite la medida de los lados:\n"))
         if calcular == 1:
@@ -51,24 +50,43 @@ def calculos_hexagono (calcular):
 
 def calculos_triangulo_rectangulo(triangulo):
     try:
+        base = 0
+        altura = 0
+        hipotenusa = 0
+        valido = True
         if triangulo == 1:
-            base = float(input("Digite la medida de su base:\n"))
-            altura = float(input("Digite la medida de su altura:\n"))
+            base = float(input("Digite la medida de su C. Opuesto:\n"))
+            altura = float(input("Digite la medida de su C. Adyacente:\n"))
             hipotenusa = ((altura**2)+(base**2))**(1/2)
             total_perimetro = altura + base + hipotenusa
-            print(f"El perimetro de su triangulo rectangulo es:{total_perimetro:.2f}\n")
+            print(f"El perimetro de su triangulo rectangulo es:{total_perimetro:.2f}")
+            print(f"La hipotenusa es:{hipotenusa:.2f}\n")
         elif triangulo == 2:
-            base = float(input("Digite la medida de su base:\n"))
-            altura = float(input("Digite la medida de su altura:\n"))
+            altura = float(input("Digite la medida de su C. Adyacente:\n"))
+            hipotenusa = float(input("Digite la medida de su hipotenusa:\n"))
+            if hipotenusa <= altura:
+                print("La hipotenusa debe ser mayor que el C. Adyacente\n")
+                valido = False
+            else:
+                base = (hipotenusa**2 - altura**2)**(1/2)
             area = (base*altura)/2
             print(f"El area de su triangulo rectangulo es:{area:.2f}\n")
         elif triangulo == 3:
-            angulo = float(input("Digite un angulo:\n"))
-            angulos = 90 - angulo 
-            if angulo >= 90 or angulo <= 0:
-                print("El angulo ingresado debe ser mayor a 0 y menor a 90°")
+            base = float(input("Digite la medida de su C. Opuesto:\n"))
+            hipotenusa = float(input("Digite la medida de su hipotenusa:\n"))
+            if hipotenusa <= base:
+                print("La hipotenusa debe ser mayor que el C. Adyacente\n")
+                valido = False
             else:
-                print((f"Sus angulos son: 90°, {angulos:.2f°}, {angulo:.2f}°\n"))     
+                altura = (hipotenusa**2 - base**2)**(1/2)
+        elif triangulo == 4:
+            angulo = float(input("Digite su angulo:\n"))
+            angulos = 90 - angulo
+            if angulo >= 90 or angulo <= 0:
+                print("El angulo ingresado debe ser mayor a 0 y menor a 90°\n")
+            else:
+                print(f"Sus angulos son: 90°, {angulo:.2f}, {angulos:.2f}\n")
+
     except ValueError:
         print("El tipo de dato ingresado no es valido\n")
 
