@@ -1,45 +1,59 @@
-from menu import menu_principal, menu_2d, menu_3d, menu_perimetro_area
-from menu import menu_triangulo_rectangulo, menu_escoger, menu_area_volumen
-from calcular_2d import calculos_triangulo_equilatero,calculos_rectangulo,calculos_circulo 
-from calcular_2d import calculos_hexagono, calculos_triangulo_rectangulo
-from calcular_3d import calculos_cubo, calculos_esfera, calculos_cilindro, calculos_piramide
+from menu import *
+from calcular_2d import *
+from calcular_3d import *
 
 pi = 3.1416
 tipo_figura = 0
+tipo_figura = menu_principal()
 while tipo_figura != 3:
-    tipo_figura = menu_principal()
     if tipo_figura == 1:
-        figura_2d = menu_2d()
-        if figura_2d == 1:
-            calcular = menu_perimetro_area()
-            calculos_triangulo_equilatero(calcular) 
-        elif figura_2d == 2:
-            calcular = menu_perimetro_area()
-            calculos_rectangulo(calcular)
-        elif figura_2d == 3:
-            calcular = menu_perimetro_area()
-            calculos_circulo(calcular)
-        elif figura_2d == 4: 
-            calcular = menu_perimetro_area()
-            calculos_hexagono (calcular)
-        elif figura_2d == 5:
-            triangulo = menu_triangulo_rectangulo()
-            calculos_triangulo_rectangulo(triangulo)
-            
+            escogio = 1
+            while escogio==1:
+                figura_2d = menu_2d()
+                if figura_2d == 1:
+                    calcular = menu_perimetro_area()
+                    calculos_triangulo_equilatero(calcular) 
+                elif figura_2d == 2:
+                    calcular = menu_perimetro_area()
+                    calculos_rectangulo(calcular)
+                elif figura_2d == 3:
+                    calcular = menu_perimetro_area()
+                    calculos_circulo(calcular)
+                elif figura_2d == 4: 
+                    calcular = menu_perimetro_area()
+                    calculos_hexagono (calcular)
+                elif figura_2d == 5:
+                    triangulo = datos_triangulo()
+                    calculos_triangulo_rectangulo(triangulo)
+                escogio = menu_escoger()
+                if escogio==2:
+                    tipo_figura=4
+                elif escogio==3:
+                    tipo_figura=3
+
     if tipo_figura == 2:
-        figura_3d = menu_3d()
-        if figura_3d == 1:
-            calcular = menu_area_volumen()
-            calculos_cubo(calcular)
-        if figura_3d == 2:
-            calcular = menu_area_volumen()
-            calculos_esfera(calcular)
-        if figura_3d == 3:
-            calcular = menu_area_volumen()
-            calculos_cilindro(calcular)
-        if figura_3d == 4:
-            calcular = menu_area_volumen()
-            calculos_piramide(calcular)
-            
-    if tipo_figura == 3:
-        print("Gracias por utilizar la calculadora")
+        escogio = 1
+        while escogio ==1:
+            figura_3d = menu_3d()
+            if figura_3d == 1:
+                calcular = menu_area_volumen()
+                calculos_cubo(calcular)
+            if figura_3d == 2:
+                calcular = menu_area_volumen()
+                calculos_esfera(calcular)
+            if figura_3d == 3:
+                calcular = menu_area_volumen()
+                calculos_cilindro(calcular)
+            if figura_3d == 4:
+                calcular = menu_area_volumen()
+                calculos_piramide(calcular)
+            escogio = menu_escoger()
+            if escogio==2:
+                tipo_figura=4
+            elif escogio==3:
+                tipo_figura=3      
+
+    if tipo_figura==4:
+        tipo_figura = menu_principal()
+    
+print("Gracias por utilizar la calculadora")
