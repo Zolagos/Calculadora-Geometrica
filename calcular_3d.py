@@ -1,6 +1,9 @@
 def calculos_cubo(calcular):
     try:
         lados = float(input("Digite la medida de los lados:\n "))
+        if lados <= 0:
+            print("No se puede numeros negativos")
+            raise ValueError
         if calcular == 1:
             volumen = lados **3
             print(f"El volumen de su cubo es:{volumen:.2f}")
@@ -14,6 +17,9 @@ def calculos_esfera(calcular):
     pi = 3.1416
     try:
         radio = float(input("Digite la medida del radio:\n "))
+        if radio <=0:
+            print("No se puede numeros negativos")
+            raise ValueError
         if calcular == 1:
             volumen = (4/3) * pi * (radio**3)
             print(f"El volumen de su esfera es:{volumen:.2f}")
@@ -28,6 +34,9 @@ def calculos_cilindro(calcular):
     try:
         radio = float(input("Digite la medida del radio:\n "))
         altura = float(input("Digite la medida de su altura:\n "))
+        if radio <=0 or altura <=0:
+            print("No se puede numeros negativos")
+            raise ValueError
         if calcular == 1:
             volumen = pi * (radio**2) * altura
             print(f"El volumen de su cilindro es:{volumen:.2f}")
@@ -41,6 +50,9 @@ def calculos_piramide(calcular):
     try:
         lado = float(input("Digite el lado de la base cuadrada:\n "))
         altura = float(input("Digite la medida de su altura:\n "))
+        if lado <=0 or altura <=0:
+            print("No se puede numeros negativos")
+            raise ValueError
         area_base = lado**2
         if calcular == 1:
             volumen = (area_base * altura) / 3
