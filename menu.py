@@ -127,19 +127,4 @@ def datos_triangulo():
             print("El tipo de dato ingresado no es un entero\n")
     return opcion
 
-def menu_triangulo_rectangulo ():
-    cond = False
-    while not cond:
-        print("¿Que desea calcular?")
-        print("     1.Perimetro")
-        print("     2.Area")
-        try:
-            triangulo = int(input("Seleccione una opción:\n"))
-            if triangulo !=1 and triangulo !=2:
-                print("El numero ingresado no es valido\n")
-                cond = False
-            else:
-                cond = True
-        except ValueError:
-            print("El tipo de dato ingresado no es un entero\n")
-    return triangulo
+
